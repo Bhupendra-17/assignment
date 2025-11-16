@@ -6,7 +6,8 @@
 <div class="max-w-4xl mx-auto">
     <h1 class="text-3xl font-bold text-gray-800 mb-6">All Users</h1>
     
-    <a href="{{ url_for('new_user') }}" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg mb-6 inline-block">
+    <!-- Use direct URL instead of url_for() -->
+    <a href="/new_user" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg mb-6 inline-block">
         Add New User
     </a>
 
@@ -33,7 +34,8 @@
                         </span>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        <a href="{{ url_for('get_user', user_id=user.id) }}" class="text-indigo-600 hover:text-indigo-900">View</a>
+                        <!-- Use direct URL instead of url_for() -->
+                        <a href="/users/{{ user.id }}" class="text-indigo-600 hover:text-indigo-900">View</a>
                     </td>
                 </tr>
                 {% endfor %}
