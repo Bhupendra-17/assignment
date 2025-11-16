@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}User Details{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">User Details</h1>
+    
+    <div class="bg-white rounded-lg shadow p-6">
+        <div class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-500">ID</label>
+                <p class="mt-1 text-lg text-gray-900">{{ user.id }}</p>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-500">Name</label>
+                <p class="mt-1 text-lg text-gray-900">{{ user.name }}</p>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-500">Email</label>
+                <p class="mt-1 text-lg text-gray-900">{{ user.email }}</p>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-500">Role</label>
+                <span class="mt-1 inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                    {{ user.role }}
+                </span>
+            </div>
+        </div>
+        
+        <div class="mt-6">
+            <a href="{{ url_for('get_users') }}" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
+                Back to Users List
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
