@@ -47,3 +47,20 @@ or
 ```bash
 python app
 ```
+
+## MySQL Queries
+
+- /users  : 
+```bash
+SELECT * FROM users
+```
+
+- /new_user  : 
+```bash
+INSERT INTO users (name, email, role) VALUES (%s, %s, %s)
+```
+
+- /users/<id>  : 
+```bash
+SELECT * FROM users WHERE id = %s", (user_id,)
+```
